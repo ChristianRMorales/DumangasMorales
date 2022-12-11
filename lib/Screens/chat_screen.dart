@@ -1,5 +1,6 @@
-import '../user.dart';
+import '../Models/user.dart';
 import 'package:flutter/material.dart';
+import '../CustomWidget/chatCard.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -30,40 +31,7 @@ class _ChatScreenState extends State<ChatScreen> {
           body: ListView.builder(
               itemCount: list.length,
               itemBuilder: (BuildContext context, int index) {
-                return InkWell(
-                    onTap: () {},
-                    child: Column(
-                      children: [
-                        ListTile(
-                          leading: CircleAvatar(
-                            backgroundImage: NetworkImage(
-                                list[index].dpUrl + index.toString() + ".jpg"),
-                          ),
-                          title: Text(
-                            list[index].name,
-                            style: TextStyle(),
-                          ),
-                          subtitle: Row(children: [
-                            Icon(Icons.done_all),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.4,
-                              child: Text(
-                                list[index].lastMessage,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                          ]),
-                          trailing: Text(list[index].time),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 80,
-                            right: 20,
-                          ),
-                          child: Divider(thickness: 1),
-                        ),
-                      ],
-                    ));
+                return ChatCard(user: list[index], index: index);
               })),
     );
   }
