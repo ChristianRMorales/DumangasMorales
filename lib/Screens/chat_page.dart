@@ -55,6 +55,8 @@ class _ChatPageState extends State<ChatPage> {
             ),
           ),
           actions: [
+            IconButton(icon: Icon(Icons.videocam), onPressed: () {}),
+            IconButton(icon: Icon(Icons.call), onPressed: () {}),
             PopupMenuButton(onSelected: ((value) {
               print(value);
             }), itemBuilder: (BuildContext context) {
