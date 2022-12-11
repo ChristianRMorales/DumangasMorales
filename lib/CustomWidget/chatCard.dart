@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Models/user.dart';
+import '../Screens/chat_page.dart';
 
 class ChatCard extends StatelessWidget {
   final User user;
@@ -9,7 +10,13 @@ class ChatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      ChatPage(user: user, index: index)));
+        },
         child: Column(
           children: [
             ListTile(
@@ -19,7 +26,6 @@ class ChatCard extends StatelessWidget {
               ),
               title: Text(
                 user.name,
-                style: TextStyle(),
               ),
               subtitle: Row(children: [
                 Icon(Icons.done_all),

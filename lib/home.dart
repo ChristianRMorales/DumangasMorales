@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
                     value: "Settings",
                   ),
                 ];
-              })
+              }),
             ],
             bottom: TabBar(
               labelStyle: TextStyle(

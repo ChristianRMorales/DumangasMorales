@@ -16,6 +16,12 @@ class _CallScreenState extends State<CallScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {},
+              child: Icon(
+                Icons.add_ic_call,
+              ),
+            ),
             body: ListView.builder(
                 itemCount: list.length,
                 itemBuilder: (BuildContext context, int index) {

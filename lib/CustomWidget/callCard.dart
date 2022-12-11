@@ -17,7 +17,6 @@ class CallCard extends StatelessWidget {
           ),
           title: Text(
             user.name,
-            style: TextStyle(),
           ),
           subtitle: Row(children: [
             SizedBox(
