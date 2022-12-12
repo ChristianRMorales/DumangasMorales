@@ -139,6 +139,7 @@ class _ChatPageState extends State<ChatPage> {
                             ))),
                     Padding(
                       padding: const EdgeInsets.only(
+                        right: 2,
                         bottom: 8,
                       ),
                       child: CircleAvatar(
