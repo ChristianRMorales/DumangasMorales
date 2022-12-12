@@ -1,4 +1,4 @@
-import 'home.dart';
+import 'Screens/welcomepage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             subtitle1: TextStyle(fontWeight: FontWeight.bold),
           ),
           primaryIconTheme: IconThemeData(color: Colors.white)),
-      home: Home(),
+      home: WelcomePage(),
     );
   }
 }

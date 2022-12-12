@@ -1,5 +1,5 @@
-import 'Screens/chat_screen.dart';
-import 'Screens/calls_screen.dart';
+import 'chat_screen.dart';
+import 'calls_screen.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
 
-class welcomepage extends StatelessWidget {
+class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class welcomepage extends StatelessWidget {
               height: MediaQuery.of(context).size.height / 10,
             ),
             Image.asset(
-              'images/welcome_screen_bg.png',
+              'lib/images/welcome_screen_bg.png',
               height: 230,
               width: 230,
               color: Colors.greenAccent[700],

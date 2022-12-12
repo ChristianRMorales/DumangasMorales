@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp2/country.dart';
+import 'home.dart';
 
 class Signup extends StatefulWidget {
   const Signup({Key? key}) : super(key: key);
@@ -49,10 +49,11 @@ class _SignupState extends State<Signup> {
     );
   }
 
- Widget countryCard() {
+  Widget countryCard() {
     return InkWell(
-      onTap: ( ) {
-        Navigator.push(context, MaterialPageRoute(builder: (builder)=>countryPage()));
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (builder) => Home()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width / 1.5,
