@@ -1,6 +1,7 @@
 import '../Models/user.dart';
 import 'package:flutter/material.dart';
 import '../CustomWidget/callCard.dart';
+import '../data/data.dart';
 
 class CallScreen extends StatefulWidget {
   @override
@@ -8,10 +9,6 @@ class CallScreen extends StatefulWidget {
 }
 
 class _CallScreenState extends State<CallScreen> {
-  List<User> list = [
-    User("Marc", "Called", "9:00AM"),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,9 +20,9 @@ class _CallScreenState extends State<CallScreen> {
               ),
             ),
             body: ListView.builder(
-                itemCount: list.length,
+                itemCount: callList.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return CallCard(user: list[index], index: index);
+                  return CallCard(user: callList[index], index: index);
                 })));
   }
 }

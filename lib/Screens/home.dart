@@ -11,6 +11,7 @@ class Home extends StatelessWidget {
         initialIndex: 1,
         child: Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             elevation: 0,
             title: Text("WhatsApp"),
             centerTitle: false,
