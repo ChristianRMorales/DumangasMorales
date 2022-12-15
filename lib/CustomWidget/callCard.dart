@@ -19,6 +19,10 @@ class CallCard extends StatelessWidget {
             user.name,
           ),
           subtitle: Row(children: [
+            Icon(
+              Icons.north_east,
+              color: Colors.teal,
+            ),
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.4,
               child: Text(
@@ -27,7 +31,12 @@ class CallCard extends StatelessWidget {
               ),
             ),
           ]),
-          trailing: Text(user.lastCallTime),
+          trailing: IconButton(
+              onPressed: () {},
+              color: Colors.teal,
+              icon: Icon(
+                Icons.phone,
+              )),
         ),
         Padding(
           padding: const EdgeInsets.only(
