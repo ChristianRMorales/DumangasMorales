@@ -2,6 +2,7 @@ import '../Models/user.dart';
 import 'package:flutter/material.dart';
 import '../CustomWidget/callCard.dart';
 import '../data/data.dart';
+import 'calls_contacts_page.dart';
 
 class CallScreen extends StatefulWidget {
   @override
@@ -14,7 +15,12 @@ class _CallScreenState extends State<CallScreen> {
     return SafeArea(
         child: Scaffold(
             floatingActionButton: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (builder) => CallsContactsPage()));
+              },
               child: Icon(
                 Icons.add_ic_call,
               ),
