@@ -37,7 +37,7 @@ class ChatCard extends StatelessWidget {
                   ),
                 ),
               ]),
-              trailing: Text(user.time),
+              trailing: Text(user.lastMessageTime),
             ),
             Padding(
               padding: const EdgeInsets.only(

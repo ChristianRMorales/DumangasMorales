@@ -22,12 +22,12 @@ class CallCard extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.4,
               child: Text(
-                user.lastMessage,
+                user.lastCallTime,
                 overflow: TextOverflow.ellipsis,
               ),
             ),
           ]),
-          trailing: Text(user.time),
+          trailing: Text(user.lastCallTime),
         ),
         Padding(
           padding: const EdgeInsets.only(

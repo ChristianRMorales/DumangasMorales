@@ -20,9 +20,9 @@ class _CallScreenState extends State<CallScreen> {
               ),
             ),
             body: ListView.builder(
-                itemCount: callList.length,
+                itemCount: contactList.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return CallCard(user: callList[index], index: index);
+                  return CallCard(user: contactList[index], index: index);
                 })));
   }
 }

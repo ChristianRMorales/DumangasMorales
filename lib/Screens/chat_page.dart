@@ -48,7 +48,7 @@ class _ChatPageState extends State<ChatPage> {
                 Text(
                   (widget.index % 2 == 1)
                       ? "Online"
-                      : "Last seen " + widget.user.time,
+                      : "Last seen " + widget.user.lastMessageTime,
                   style: TextStyle(
                     fontSize: 13,
                   ),

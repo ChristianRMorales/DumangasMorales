@@ -59,11 +59,97 @@ class _ContactsPageState extends State<ContactsPage> {
           ),
         ],
       ),
-      body: ListView.builder(
-          itemCount: contactList.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ContactCard(user: contactList[index], index: index);
-          }),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5, bottom: 5),
+              child: InkWell(
+                onTap: () {},
+                child: ListTile(
+                  leading: CircleAvatar(
+                    child: Icon(Icons.group),
+                  ),
+                  title: Text("New group"),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5, bottom: 5),
+              child: InkWell(
+                onTap: () {},
+                child: ListTile(
+                  leading: CircleAvatar(
+                    child: Icon(Icons.person_add),
+                  ),
+                  title: Text("New contact"),
+                  trailing: Icon(Icons.qr_code),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5, bottom: 5),
+              child: InkWell(
+                onTap: () {},
+                child: ListTile(
+                  leading: CircleAvatar(
+                    child: Icon(Icons.groups),
+                  ),
+                  title: Text("New community"),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: Text("Contacts on WhatsApp"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ListView.builder(
+                shrinkWrap: true,
+                itemCount: contactList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ContactCard(user: contactList[index], index: index);
+                }),
+            Padding(
+              padding: const EdgeInsets.only(top: 5, bottom: 5),
+              child: InkWell(
+                onTap: () {},
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: const Color(0xFFEBECEE),
+                    child: Icon(Icons.share, color: const Color(0xFF8496A0)),
+                  ),
+                  title: Text("Share invite link"),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5, bottom: 5),
+              child: InkWell(
+                onTap: () {},
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: const Color(0xFFEBECEE),
+                    child: Icon(Icons.help_outline,
+                        color: const Color(0xFF8496A0)),
+                  ),
+                  title: Text("Contacts help"),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     )));
   }
 }
